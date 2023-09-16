@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "../cse210/cse210-projects"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "cse121b"
+	}
+}
