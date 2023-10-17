@@ -1,7 +1,7 @@
 /* W05: Programming Tasks */
 
 /* Declare and initialize global variables */
-const templesElement =
+const templesElement = document.getElementById("temples").innerHTML;
 
 const templeList = [
 
@@ -31,7 +31,7 @@ const getTemples = async () => {
         const data = await response.json();
         templeList.appendChild(data);
         displayTemples(templeList)
-    }
+    };
 }
 
 /* reset Function */
@@ -58,13 +58,15 @@ let sortBy = async (templeList) => {
 
         case "older":
             const olderFilter = templeList.filter(templeList => templeList.dedicated(new Date(1950, 0, 1)));
-            displayTemples(olderFilter)
+            displayTemples(olderFilter);
             break;
 
         case "all":
-            const allfilter = templeList => templeList.temples
+            const allFilter = templeList => templeList.temples;
+            displayTemples(allFilter);
+            break;
 
-    
+       
         default:
             break;
     }
