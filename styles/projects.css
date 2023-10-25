@@ -1,0 +1,97 @@
+
+nav {
+    background-color: black;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
+nav ul li {
+    flex: 1 1 auto;
+}
+
+nav ul li:first-child {
+    display: block;
+    font-size: 2rem;
+}
+
+nav ul li:first-child a {
+    padding: 1px 10px;
+}
+
+nav ul li {
+    display: none;
+    list-style: none;
+    margin: 10px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+nav ul li a:hover {
+    background-color: #efefef;
+    color: burlywood;
+}
+
+body {
+    /* background-color: #76a9e0; */
+    background-image: url("../images/pexels-martin-de-arriba-7171398.jpg");
+    background-color: #017199;
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .center {
+    margin: auto;
+    margin-top: 200px;
+  }
+  
+  .heading {
+    font-family: 'Lato', sans-serif;
+
+  }
+  #header {
+    font-family: 'Righteous', sans-serif;
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-family: 'Righteous', sans-serif;
+  }
+  
+  .book-list {
+    margin-top: 50px;
+    visibility: hidden;
+ }
+ footer {
+    background-color: #444;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+.open li {
+    display: block;
+}
