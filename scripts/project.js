@@ -3,7 +3,7 @@ $(document).ready(function() {
     var outputList = document.getElementById("list-output");
     var bookUrl = "https://www.googleapis.com/books/v1/volumes?q=";
     var apiKey = "key=AIzaSyDtXC7kb6a7xKJdm_Le6_BYoY5biz6s8Lw";
-    var placeHolder = '<img src="https://via.placeholder.com/150">';
+    var placeHldr = '<img src="https://via.placeholder.com/150">';
     var searchData;
     //listener for search button
     $("#search").click(function() {
@@ -36,7 +36,7 @@ $(document).ready(function() {
             }
           });
         }
-        $("#search-box").val(""); //clean search box
+        $("#search-box").val(""); //clearn search box
      });
      /*
      * function to display result in index.html
@@ -50,15 +50,15 @@ $(document).ready(function() {
           publisher1 = item.volumeInfo.publisher;
           bookLink1 = item.volumeInfo.previewLink;
           bookIsbn = item.volumeInfo.industryIdentifiers[1].identifier
-          bookImg1 = (item.volumeInfo.imageLinks) ? item.volumeInfo.imageLinks.thumbnail : placeHolder ;
+          bookImg1 = (item.volumeInfo.imageLinks) ? item.volumeInfo.imageLinks.thumbnail : placeHldr ;
           item2 = response.items[i+1];
           title2 = item2.volumeInfo.title;
           author2 = item2.volumeInfo.authors;
           publisher2 = item2.volumeInfo.publisher;
           bookLink2 = item2.volumeInfo.previewLink;
           bookIsbn2 = item2.volumeInfo.industryIdentifiers[1].identifier
-          bookImg2 = (item.volumeInfo.imageLinks) ? item.volumeInfo.imageLinks.thumbnail : placeHolder ;
-          bookImg2 = (item2.volumeInfo.imageLinks) ? item2.volumeInfo.imageLinks.thumbnail : placeHolder ;
+          bookImg2 = (item.volumeInfo.imageLinks) ? item.volumeInfo.imageLinks.thumbnail : placeHldr ;
+          bookImg2 = (item2.volumeInfo.imageLinks) ? item2.volumeInfo.imageLinks.thumbnail : placeHldr ;
   
           // in production code, item.text should have the HTML entities escaped.
           outputList.innerHTML += '<div class="row mt-4">' +
@@ -69,13 +69,13 @@ $(document).ready(function() {
         }
      }
      /*
-     * card element formatter using es6 backticks and templates (individual card)
+     * card element formatter using es6 backticks and templates (indivial card)
      * @param bookImg title author publisher bookLink
      * @return htmlCard
      */
      function formatOutput(bookImg, title, author, publisher, bookLink, bookIsbn) {
        // console.log(title + ""+ author +" "+ publisher +" "+ bookLink+" "+ bookImg)
-       var viewUrl = 'book.html?isbn='+bookIsbn; //constructing link for book search
+       var viewUrl = 'book.html?isbn='+bookIsbn; //constructing link for bookviewer
        var htmlCard = `<div class="col-lg-6">
          <div class="card" style="">
            <div class="row no-gutters">
